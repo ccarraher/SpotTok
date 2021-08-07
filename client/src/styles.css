@@ -1,0 +1,126 @@
+html {
+    scroll-snap-stop: y mandatory;
+}
+.container {
+    height: 640px;
+    width: 640px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.App {
+    background-color: #121212;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+  
+.container {
+    position: relative;
+    height: 640px;
+    overflow: scroll;
+    width: 80%;
+    width: 640px;
+    scroll-snap-type: y mandatory;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+.container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.body {
+    background-color: #121212; 
+}
+.song {
+    position: relative;
+    background-color: white;
+    height: 640px;
+    width: 640px;
+    scroll-snap-align: start;
+}
+.videoFooter {
+    position: relative;
+    bottom: 150px;
+    margin-left: 50px;
+    color: white;
+    display: flex;
+}
+  
+.videoFooter__text {
+    flex: 1;
+}
+.videoFooter__text > h3 {
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+    font-size: 1.5rem;
+}
+  
+.videoFooter__text > p {
+    padding-bottom: 20px;
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+    font-size: 1.2rem;
+}
+.videoFooter__record {
+    animation: spinTheRecord infinite 5s linear;
+    height: 50px;
+    filter: invert(1);
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
+@keyframes spinTheRecord {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+.videoSidebar{
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    color: white;
+}
+.videoSidebar__button {
+    padding-bottom: 20px;
+    text-align: center;
+}
+.playlist_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.playlist_wrapper:hover {
+    opacity: .5;
+}
+.modal-content {
+    background-color: #121212;
+}
+.modal-title {
+    color: white;
+}
+.modal-header {
+    border: none;
+}
+.modal-footer {
+    border: none;
+}
